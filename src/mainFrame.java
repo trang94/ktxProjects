@@ -237,13 +237,7 @@ public class mainFrame extends javax.swing.JFrame {
         jLabel15.setText("Que quan : ");
 
         jLabel16.setText("doi tuong : ");
-
-        newsv_quetf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                newsv_quetfActionPerformed(evt);
-            }
-        });
-
+     
         newsv_okbt.setText("Add");
         newsv_okbt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -258,7 +252,7 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
-        newsv_doituong.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Thuong", "con thuong binh", "dan toc thieu so", "vung sau,vung xa,hai dao" }));
+        newsv_doituong.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Thuong", "con thuong binh", "dan toc thieu so", "vung sau,vung xa,hai dao","mo coi" }));
 
         jLabel56.setText("phong : ");
 
@@ -384,23 +378,14 @@ public class mainFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setText("Phong : ");
 
-        newphong_phongtf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                newphong_phongtfActionPerformed(evt);
-            }
-        });
+       
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel2.setText("Khu : ");
 
         newphong_khuselect.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         newphong_khuselect.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "B5", "B6", "B7" }));
-        newphong_khuselect.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                newphong_khuselectActionPerformed(evt);
-            }
-        });
-
+        
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setText("Loai : ");
 
@@ -523,7 +508,7 @@ public class mainFrame extends javax.swing.JFrame {
 
         editsv_giotinh.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Nam", "Nu" }));
 
-        editsv_doituongcb.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Thuong", "con thuong binh", "dan toc thieu so", "vung sau,vung xa,hai dao" }));
+        editsv_doituongcb.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Thuong", "con thuong binh", "dan toc thieu so", "vung sau,vung xa,hai dao", "mo coi" }));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -1455,16 +1440,8 @@ public class mainFrame extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>                        
-
-    private void newphong_phongtfActionPerformed(java.awt.event.ActionEvent evt) {                                                 
-        // TODO add your handling code here:
-    }                                                
-
-    private void newphong_khuselectActionPerformed(java.awt.event.ActionEvent evt) {                                                   
-        // TODO add your handling code here:
-    }                                                  
-
+    }                       
+                                                
     private void newphong_okbtActionPerformed(java.awt.event.ActionEvent evt) {                                              
        /*
     //////////////////////    them phong o dayyyyyyyyyyyyyyy
@@ -1477,10 +1454,7 @@ public class mainFrame extends javax.swing.JFrame {
         newphong_khuselect.setSelectedIndex(0);
         newphong_loaiphongselect.setSelectedIndex(0);
     }                                                 
-
-    private void newsv_quetfActionPerformed(java.awt.event.ActionEvent evt) {                                            
-        // TODO add your handling code here:
-    }                                           
+                                         
 
     private void newsv_cancelbtActionPerformed(java.awt.event.ActionEvent evt) {                                               
         newsv_khoatf.setText("");
