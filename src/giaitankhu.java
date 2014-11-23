@@ -15,9 +15,12 @@ public giaitankhu(int khugt)
 	Statement stmt;
 	try {
 		stmt=c.createStatement();
-		String sql="delete from sinhvien where maph like '"+khu+"';";
+		String sql="delete from sinhvien where maph like '"+khu+"%';";
 		stmt.executeUpdate(sql);
 		sql="update phong set songuoi=0 where khu='"+khu+"';";
+		stmt.executeUpdate(sql);
+		sql="update diennuoc set dtt =0 ,dts =0 ,ntt =0 ,nts =0 ,sum_sd =0 ,sum_sn =0 ,tiendien =0 ,tnuoc =0 "
+				+"where maph like '"+khu+"%';";
 		stmt.executeUpdate(sql);
 		stmt.close();
 		c.close();
