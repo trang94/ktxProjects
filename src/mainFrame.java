@@ -1,4 +1,3 @@
-
 /**
  *
  * @author iceroot
@@ -1541,16 +1540,22 @@ public class mainFrame extends javax.swing.JFrame {
         /*
          //////////////////////giai tan viet o day
          */
+    	int khu=giaitankhuselect.getSelectedIndex();
+    	new giaitankhu(khu);
     }                                               
 
     private void thuhoi_cancelbtActionPerformed(java.awt.event.ActionEvent evt) {                                                
         thuhoi_maphongtf.setText("");
+        thuhoi_khuphong.setSelectedIndex(0);
     }                                               
 
     private void thuhoibtActionPerformed(java.awt.event.ActionEvent evt) {                                         
         /*
          thu hoi phong viet o day
          */
+    	int khu=thuhoi_khuphong.getSelectedIndex();
+    	String pthuhoi=thuhoi_phongtf.getText();
+    	new thuhoiphong(khu, pthuhoi);
     }                                        
 
     private void delete_cancelbtActionPerformed(java.awt.event.ActionEvent evt) {                                                
@@ -1561,6 +1566,8 @@ public class mainFrame extends javax.swing.JFrame {
         /*
          delete sinh vien o day !!!!!!!!!!!!
          */
+    	String mssv=deletesvtf.getText();
+    	new deletesv(mssv);
     }                                         
 
     private void editsv_seachbtActionPerformed(java.awt.event.ActionEvent evt) {                                               
