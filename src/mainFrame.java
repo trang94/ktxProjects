@@ -1,6 +1,7 @@
+
 /**
  *
- * @author tohai
+ * @author iceroot
  */
 @SuppressWarnings("serial")
 public class mainFrame extends javax.swing.JFrame {
@@ -40,6 +41,8 @@ public class mainFrame extends javax.swing.JFrame {
         jLabel56 = new javax.swing.JLabel();
         newsv_phongtf = new javax.swing.JTextField();
         newsv_phongtrongbt = new javax.swing.JButton();
+        jLabel60 = new javax.swing.JLabel();
+        newsv_loptf = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         newphong_phongtf = new javax.swing.JTextField();
@@ -237,7 +240,8 @@ public class mainFrame extends javax.swing.JFrame {
         jLabel15.setText("Que quan : ");
 
         jLabel16.setText("doi tuong : ");
-     
+
+        
         newsv_okbt.setText("Add");
         newsv_okbt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -252,7 +256,7 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
-        newsv_doituong.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Thuong", "con thuong binh", "dan toc thieu so", "vung sau,vung xa,hai dao","mo coi" }));
+        newsv_doituong.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Thuong", "con thuong binh", "dan toc thieu so", "vung sau,vung xa,hai dao", "mo coi" }));
 
         jLabel56.setText("phong : ");
 
@@ -263,17 +267,14 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel60.setText("lop :");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(96, 96, 96)
-                        .addComponent(newsv_okbt, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(newsv_cancelbt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(50, 50, 50)
                         .addComponent(jLabel7))
@@ -314,12 +315,19 @@ public class mainFrame extends javax.swing.JFrame {
                                 .addGroup(jPanel2Layout.createSequentialGroup()
                                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel16)
-                                        .addComponent(jLabel56))
+                                        .addComponent(jLabel56)
+                                        .addComponent(jLabel60))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(newsv_phongtf, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(newsv_doituong, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(1, 1, 1))))))
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(newsv_phongtf, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
+                                        .addComponent(newsv_doituong, 0, 169, Short.MAX_VALUE)
+                                        .addComponent(newsv_loptf))
+                                    .addGap(1, 1, 1)))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(91, 91, 91)
+                        .addComponent(newsv_okbt, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(newsv_cancelbt, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(287, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -366,11 +374,15 @@ public class mainFrame extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel56)
                     .addComponent(newsv_phongtf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel60)
+                    .addComponent(newsv_loptf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(newsv_okbt)
                     .addComponent(newsv_cancelbt))
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addContainerGap(157, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("      them sinh vien      ", jPanel2);
@@ -385,7 +397,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         newphong_khuselect.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         newphong_khuselect.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "B5", "B6", "B7" }));
-        
+     
+
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setText("Loai : ");
 
@@ -1440,13 +1453,16 @@ public class mainFrame extends javax.swing.JFrame {
         );
 
         pack();
-    }                       
-                                                
+    }// </editor-fold>                        
     private void newphong_okbtActionPerformed(java.awt.event.ActionEvent evt) {                                              
        /*
     //////////////////////    them phong o dayyyyyyyyyyyyyyy
         * 
         */
+    	String phong=newphong_phongtf.getText();
+    	int khu=newphong_khuselect.getSelectedIndex();
+    	int loai=newphong_loaiphongselect.getSelectedIndex();
+    	new addphong(phong,khu,loai);
     }                                             
 
     private void newphong_cancelbtActionPerformed(java.awt.event.ActionEvent evt) {                                                  
@@ -1454,12 +1470,13 @@ public class mainFrame extends javax.swing.JFrame {
         newphong_khuselect.setSelectedIndex(0);
         newphong_loaiphongselect.setSelectedIndex(0);
     }                                                 
-                                         
 
+   
     private void newsv_cancelbtActionPerformed(java.awt.event.ActionEvent evt) {                                               
         newsv_khoatf.setText("");
         newsv_nametf.setText("");
         newsv_ngaysinhtf.setText("");
+        newsv_loptf.setText("");
         newsv_mssvtf.setText("");
         newsv_phongtf.setText("");
         newsv_quetf.setText("");
@@ -1488,6 +1505,22 @@ public class mainFrame extends javax.swing.JFrame {
          * addsvien o dayyy
          
         */
+    	String mssv=newsv_mssvtf.getText();
+    	String name=newsv_nametf.getText();
+    	String ngaysinh = newsv_ngaysinhtf.getText();
+    	int khui=newsv_khuselect.getSelectedIndex();
+    	String khu;if(khui==0)khu="b5";else{
+    		if(khui==1)khu="b6";else khu="b7";
+    	}
+    	String que=newsv_quetf.getText();
+    	String khoa=newsv_khoatf.getText();
+    	String phong=newsv_phongtf.getText();
+    	String maph=khu+"-"+phong;
+    	String lop = newsv_loptf.getText();
+    	int dt=newsv_khuselect.getSelectedIndex();
+    	int gt=newsv_loaiphongselect.getSelectedIndex();
+    	new addsv(name, lop, mssv, que, ngaysinh, dt, khoa, gt, maph);
+    	
     }                                          
 
     private void editphong__okbtActionPerformed(java.awt.event.ActionEvent evt) {                                                
@@ -1598,7 +1631,7 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane addsv_jScrollPane;
     private javax.swing.JTable baocao_diennuoc_list;
     @SuppressWarnings("rawtypes")
-	private javax.swing.JComboBox baocao_khu;
+    private javax.swing.JComboBox baocao_khu;
     private javax.swing.JLabel baocao_mssvlbl;
     private javax.swing.JLabel baocao_namelbl;
     private javax.swing.JLabel baocao_ngayvaolbl;
@@ -1609,16 +1642,16 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JButton editphong__okbt;
     private javax.swing.JButton editphong_cancelbt;
     @SuppressWarnings("rawtypes")
-	private javax.swing.JComboBox editphong_khu;
+    private javax.swing.JComboBox editphong_khu;
     private javax.swing.JTextField editphong_loaicu;
     private javax.swing.JTextField editphong_loaiphmoi;
     private javax.swing.JTextField editphong_phongcu;
     private javax.swing.JTextField editphong_phongmoi;
     private javax.swing.JButton editsv_cancelbt;
     @SuppressWarnings("rawtypes")
-	private javax.swing.JComboBox editsv_doituongcb;
+    private javax.swing.JComboBox editsv_doituongcb;
     @SuppressWarnings("rawtypes")
-	private javax.swing.JComboBox editsv_giotinh;
+    private javax.swing.JComboBox editsv_giotinh;
     private javax.swing.JTextField editsv_khoatf;
     private javax.swing.JTextField editsv_mssv_seachtf;
     private javax.swing.JTextField editsv_mssvtf;
@@ -1630,7 +1663,7 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JButton editsv_seachbt;
     private javax.swing.JButton giaitankhu_okbt;
     @SuppressWarnings("rawtypes")
-	private javax.swing.JComboBox giaitankhuselect;
+    private javax.swing.JComboBox giaitankhuselect;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1687,6 +1720,7 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel66;
@@ -1721,20 +1755,21 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel loaiph_seachlbl;
     private javax.swing.JButton newphong_cancelbt;
     @SuppressWarnings("rawtypes")
-	private javax.swing.JComboBox newphong_khuselect;
+    private javax.swing.JComboBox newphong_khuselect;
     @SuppressWarnings("rawtypes")
-	private javax.swing.JComboBox newphong_loaiphongselect;
+    private javax.swing.JComboBox newphong_loaiphongselect;
     private javax.swing.JButton newphong_okbt;
     private javax.swing.JTextField newphong_phongtf;
     private javax.swing.JButton newsv_cancelbt;
     @SuppressWarnings("rawtypes")
-	private javax.swing.JComboBox newsv_doituong;
+    private javax.swing.JComboBox newsv_doituong;
     private javax.swing.JTextField newsv_khoatf;
     @SuppressWarnings("rawtypes")
-	private javax.swing.JComboBox newsv_khuselect;
+    private javax.swing.JComboBox newsv_khuselect;
     private javax.swing.JTable newsv_listphongcon;
     @SuppressWarnings("rawtypes")
-	private javax.swing.JComboBox newsv_loaiphongselect;
+    private javax.swing.JComboBox newsv_loaiphongselect;
+    private javax.swing.JTextField newsv_loptf;
     private javax.swing.JTextField newsv_mssvtf;
     private javax.swing.JTextField newsv_nametf;
     private javax.swing.JTextField newsv_ngaysinhtf;
@@ -1745,12 +1780,12 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JButton thongkebt;
     private javax.swing.JButton thuhoi_cancelbt;
     @SuppressWarnings("rawtypes")
-	private javax.swing.JComboBox thuhoi_khuphong;
+    private javax.swing.JComboBox thuhoi_khuphong;
     private javax.swing.JTextField thuhoi_maphongtf;
     private javax.swing.JButton thuhoibt;
     private javax.swing.JLabel tracusv_mssv;
     @SuppressWarnings("rawtypes")
-	private javax.swing.JComboBox tracuudn_khu;
+    private javax.swing.JComboBox tracuudn_khu;
     private javax.swing.JTextField tracuudn_phongtf;
     private javax.swing.JButton tracuudn_seach;
     private javax.swing.JTable tracuudn_ttdiennuoc;
