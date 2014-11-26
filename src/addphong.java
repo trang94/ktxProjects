@@ -21,8 +21,10 @@ public addphong(String phong,int khu,int loaiphong){
 		stmt =c.createStatement();
 	String sql="insert into phong(maph,nha,songuoi,loaiphong)"+"values "+"('"+maph+"','"+addp_khu+"',"+songuoi+",'"+addp_loai+"');";
 	stmt.executeUpdate(sql);
-	sql ="insert into diennuov(maph,dtt,dts,ntt,nts,sum_sd,sum_nc,tiendien,tnuoc)"
+	sql ="insert into diennuoc(maph,dtt,dts,ntt,nts,sum_sd,sum_nc,tiendien,tnuoc)"
 			+"values ('"+maph+"',0,0,0,0,0,0,0,0);";
+	stmt.executeUpdate(sql);
+	sql="update nha set sophong=sophong+1";
 	stmt.executeUpdate(sql);
 	stmt.close();
 
